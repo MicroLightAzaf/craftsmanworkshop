@@ -6,7 +6,7 @@
 
   <meta charset="utf-8">
   <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=800, initial-scale=1, maximum-scale=1">
   <meta name="description" content="">
 
 
@@ -342,11 +342,8 @@
                   MD5（Windows）：387B8B61CE4DFA864D6AAF6BE9F614D4</br>
                   MD5（Android）：2D8E475196B8C5096E58F5D664CDFA2F</br>
                   MD5（MAC OS X）：A3A3B9D0D23198A3ECDACCCFEEC31960</p>
-                <div ><span class="brieftext1">百度网盘：&nbsp</span><span class="brieftext1" href=' https://pan.baidu.com/s/1pumVbW0NE_SPNcYjsFPHRQ'> https://pan.baidu.com/s/1pumVbW0NE_SPNcYjsFPHRQ</span><span class="brieftext1">&nbsp提取码：&nbsp</span><span class="brieftext1">4y4q</span></div>
-                
-                <div><span class="brieftext1">Google Drive：&nbsp</span><span class="brieftext1" href='https://drive.google.com/open?id=1PukoBaZu6_EfKdlxJQbrTBCyhoyZsRzZ'>https://drive.google.com/open?id=1PukoBaZu6_EfKdlxJQbrTBCyhoyZsRzZ</span></div>
-            
-            
+                <div ><span class="brieftext1">百度网盘：&nbsp</span><span class="brieftext1" href=' https://pan.baidu.com/s/1pumVbW0NE_SPNcYjsFPHRQ'> <a target="_blank" href="https://pan.baidu.com/s/1pumVbW0NE_SPNcYjsFPHRQ">百度网盘</a></span><span class="brieftext1">&nbsp&nbsp&nbsp提取码：&nbsp</span><span class="brieftext1">4y4q</span></div>
+                <div><span class="brieftext1">Google Drive：&nbsp</span><span class="brieftext1" href='https://drive.google.com/open?id=1PukoBaZu6_EfKdlxJQbrTBCyhoyZsRzZ'><a target="_blank" href="https://drive.google.com/open?id=1PukoBaZu6_EfKdlxJQbrTBCyhoyZsRzZ">Google Drive</a></span></div>
             </div>
           </div>
 
@@ -419,8 +416,6 @@
   <script>
     function Fresize() {
 
-
-
       var borderdivX = window.innerWidth - 64;
       var borderdivY = window.innerHeight - 64;
       var borderPositionT = window.innerWidth / 2 - 90;
@@ -444,11 +439,17 @@
       $('#topborder').attr({ "style": "width:" + borderdivX + 'px' })
       $('#bottomborder').attr({ "style": "width:" + borderdivX + 'px' })
       $('#encodeFrame').attr({ "style": "top:" + encoderY + 'px;left:' + encoderX + "px" })
+      if (window.innerWidth<=1000){
+        $('.nav').attr({"style":"display:none"});
+      }
+      else {
+        $('.nav').attr({"style":""});
+      }
     }
 
-
-    $(window).resize(Fresize());
-
+   window.onresize=function () {
+      Fresize();
+   }
   </script>
 
   <script type="text/javascript">
