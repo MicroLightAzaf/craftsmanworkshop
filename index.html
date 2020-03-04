@@ -6,7 +6,7 @@
 
   <meta charset="utf-8">
   <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-  <meta name="viewport" content="width=800, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=800,maximum-scale=1，user-scalable=no">
   <meta name="description" content="">
 
 
@@ -413,7 +413,7 @@
   <script type="text/javascript" src="js/plugins.js"></script>
   <script type="text/javascript" src="js/scripts.js"></script>
   <script type="text/javascript" src="js/meaEncode.js"></script>
-  <script>
+  <script type="text/javascript">
     function Fresize() {
 
       var borderdivX = window.innerWidth - 64;
@@ -446,12 +446,13 @@
         $('.nav').attr({"style":""});
       }
     }
-
+    window.onload=function(){
+      Fresize();
+    }
    window.onresize=function () {
       Fresize();
    }
   </script>
-
   <script type="text/javascript">
     $('#gamelogoJ').hide();
     function JPNLanguage() {
@@ -571,7 +572,7 @@
 
 
     $('#page'+n).addClass('active fp-completely');
-    $("#fullpage").removeAttr("style")
+    $("#fullpage").removeAttr("style");
     $("#fullpage").attr({ "style": 'height: 100%; position: relative; touch-action: none; transform: translate3d(0px,' + pos +'px, 0px); transition: all 700ms ease 0s;'})
   }
   
